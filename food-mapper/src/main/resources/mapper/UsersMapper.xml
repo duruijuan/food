@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.duruijuan.mapper.UsersMapper">
+  <resultMap id="BaseResultMap" type="com.duruijuan.pojo.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="nickname" jdbcType="VARCHAR" property="nickname" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="face" jdbcType="VARCHAR" property="face" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
+    <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.duruijuan.pojo.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="pwd" jdbcType="VARCHAR" property="pwd" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="card" jdbcType="VARCHAR" property="card" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.duruijuan.pojo.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="role" jdbcType="VARCHAR" property="role" />
+    <result column="addtime" jdbcType="TIMESTAMP" property="addtime" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.duruijuan.pojo.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <result column="USER" jdbcType="CHAR" property="user" />
+    <result column="CURRENT_CONNECTIONS" jdbcType="BIGINT" property="currentConnections" />
+    <result column="TOTAL_CONNECTIONS" jdbcType="BIGINT" property="totalConnections" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.duruijuan.pojo.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="role" jdbcType="VARCHAR" property="role" />
+    <result column="addtime" jdbcType="TIMESTAMP" property="addtime" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.duruijuan.pojo.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="pwd" jdbcType="VARCHAR" property="pwd" />
+    <result column="realname" jdbcType="VARCHAR" property="realname" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="card" jdbcType="VARCHAR" property="card" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="phone" jdbcType="VARCHAR" property="phone" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="type" jdbcType="INTEGER" property="type" />
+  </resultMap>
+  <resultMap id="BaseResultMap" type="com.duruijuan.pojo.Users">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="role" jdbcType="VARCHAR" property="role" />
+    <result column="addtime" jdbcType="TIMESTAMP" property="addtime" />
+  </resultMap>
+</mapper>
