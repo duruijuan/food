@@ -18,28 +18,4 @@
     <result column="created_time" jdbcType="TIMESTAMP" property="createdTime" />
     <result column="updated_time" jdbcType="TIMESTAMP" property="updatedTime" />
   </resultMap>
-  <resultMap id="BaseResultMap" type="com.duruijuan.pojo.UserAddress">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="user_id" jdbcType="INTEGER" property="userId" />
-    <result column="address" jdbcType="VARCHAR" property="address" />
-    <result column="remark" jdbcType="VARCHAR" property="remark" />
-    <result column="isdefault" jdbcType="INTEGER" property="isdefault" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
-  </resultMap>
-  <resultMap id="BaseResultMap" type="com.duruijuan.pojo.UserAddress">
-    <!--
-      WARNING - @mbg.generated
-    -->
-    <id column="id" jdbcType="INTEGER" property="id" />
-    <result column="user_id" jdbcType="INTEGER" property="userId" />
-    <result column="address" jdbcType="VARCHAR" property="address" />
-    <result column="remark" jdbcType="VARCHAR" property="remark" />
-    <result column="isdefault" jdbcType="INTEGER" property="isdefault" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
-  </resultMap>
 </mapper>
