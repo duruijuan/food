@@ -3,6 +3,8 @@ package com.duruijuan.controller;
 import com.duruijuan.pojo.bo.UserBo;
 import com.duruijuan.service.UserService;
 import com.duruijuan.utils.JsonResult;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
  * @author: duruijuan
  * @since: 2024-01-16 15:22
  **/
-
+@Api(value = "注册登录",tags={"用于注册登录的相关接口"})
 @RestController
 @RequestMapping("passport")
 public class PassportController {
@@ -30,6 +32,7 @@ public class PassportController {
      * @author: duruijuan
      * @since: 2024-01-16 15:23
      **/
+    @ApiOperation(value = "用户名是否存在",notes="用户名是否存在",httpMethod = "GET")
     @GetMapping("/usernameIsExist")
     public JsonResult usernameIsExist(@RequestParam String username) {
 //        判断用户名不能为空
@@ -47,7 +50,7 @@ public class PassportController {
         }
 
     }
-
+    @ApiOperation(value = "用户注册",notes="用户注册",httpMethod = "POST")
     @PostMapping("/regist")
     public JsonResult regist(@RequestBody UserBo userBo) {
         String username=userBo.getUsername();

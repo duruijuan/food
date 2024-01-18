@@ -4,8 +4,8 @@ import com.duruijuan.service.StuService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * @projectName: food
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since: 2024-01-06 19:00
  * @version: 1.0
  */
-
+@ApiIgnore
 @RestController
 public class StuFoodController {
     @Autowired
