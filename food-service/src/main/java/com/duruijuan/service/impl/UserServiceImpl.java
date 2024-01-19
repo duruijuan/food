@@ -8,6 +8,7 @@ import com.duruijuan.pojo.bo.UserBo;
 import com.duruijuan.service.UserService;
 import com.duruijuan.utils.DateUtil;
 import com.duruijuan.utils.MD5Utils;
+
 import org.n3r.idworker.Sid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -60,6 +61,17 @@ public class UserServiceImpl implements UserService {
         user.setUpdatedTime(new Date());
         usersMapper.insert(user);
         return user;
+    }
+    @Transactional(propagation = Propagation.SUPPORTS)
+    @Override
+    public Users queryUserForLogin(String username, String password) {
+
+        Example userExample=new Example(Users.class);
+        Example.Criteria userExampleCriteria=userExample.createCriteria();
+        userExampleCriteria.andEqualTo("username",username);
+        userExampleCriteria.andEqualTo("password",password);
+        Users result=usersMapper.selectOneByExample(userExample);
+        return result;
     }
 
 

@@ -1,8 +1,10 @@
 package com.duruijuan.controller;
 
+import com.duruijuan.pojo.Users;
 import com.duruijuan.pojo.bo.UserBo;
 import com.duruijuan.service.UserService;
 import com.duruijuan.utils.JsonResult;
+import com.duruijuan.utils.MD5Utils;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
@@ -11,9 +13,6 @@ import org.springframework.web.bind.annotation.*;
 
 /**
  * description:
- *
- * @param null
- * @return {@link null}
  * @author: duruijuan
  * @since: 2024-01-16 15:22
  **/
@@ -80,5 +79,37 @@ public class PassportController {
 
     }
 
+    @ApiOperation(value = "用户登录",notes="用户登录",httpMethod = "POST")
+    @PostMapping("/login")
+    public JsonResult login(@RequestBody UserBo userBo) throws Exception {
+        String username=userBo.getUsername();
+        String password=userBo.getPassword();
+        //String confirmPassword=userBo.getConfirmPassword();
+        //判断用户名和密码必须不为空
+        if(StringUtils.isBlank(username)||StringUtils.isBlank(password)){
+            return JsonResult.errorMsg("用户名或密码不能为空");
 
+        }
+//        查询用户名是否存在
+//        boolean isExist = userService.queryUsernameIsExist(username);
+//        if (isExist) {
+//            return JsonResult.errorMsg("用户名已经存在");
+//        }
+//        密码长度不能少于6位
+//        if(password.length()<6){
+//            return JsonResult.errorMsg("密码长度不能少于6位");
+//        }
+//        判断两次密码是否一致
+//        if(!password.equals(confirmPassword)){
+//            return JsonResult.errorMsg("两次密码不一致");
+//        }
+//        实现登录
+        Users userResult=userService.queryUserForLogin(username, MD5Utils.getMD5Str(password));
+
+//
+        if(userResult==null){
+            return JsonResult.errorMsg("用户名已经存在");
+        }
+        return JsonResult.ok(userResult);
+    }
 }
